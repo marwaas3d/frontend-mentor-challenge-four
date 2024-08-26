@@ -1,0 +1,183 @@
+
+    :root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+    }
+
+    *{
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    body{
+        height: 100vh;
+        background-color: var(--Pale-blue);
+        background-image: url('./images/pattern-background-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container{
+        width: 362px;
+        height: 574px;
+        background-color: var(--Very-pale-blue);
+        border-radius: 21px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        box-shadow: 1px 13px 16px 0px #a09adf5c;
+    }
+    img{
+        justify-content: flex-start;
+        align-self: flex-start;
+        border-top-left-radius: 21px;
+        border-top-right-radius: 21px;
+        width: inherit;
+    }
+
+    .container h1{
+        font-size: 23px;
+        font-family: "Red Hat Display", sans-serif;
+        font-weight: 900;
+        align-self: center;
+        margin-top: 39px;
+    }
+
+    .container p{
+        font-size: 16px;
+        font-family: "Red Hat Display", sans-serif;
+        font-weight: 500;
+        color: var(--Desaturated-blue);
+        margin-top: 21px;
+        text-align: center;
+    }
+
+    .box{
+        width: 281px;
+        height: 81px;
+        border-radius: 10px;
+        background-color: hsl(225deg 41.63% 93.52% / 39%);
+        justify-content: center;
+        align-self: center;
+        margin-top: 19px;
+        position: relative;
+    }
+    .box .plan{
+        font-family: "Red Hat Display", sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        margin-left: 25%;
+        margin-top: 16px;
+    }
+
+    .box p {
+        font-size: 13px;
+        margin-left: -22%;
+        transform: translateY(-15px);
+    }
+
+    .box a {
+        font-family: "Red Hat Display", sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        color: var(--Bright-blue);
+        margin-left: 76%;
+        position: absolute;
+        top: 29px;
+    }
+
+    .box a:hover {
+        text-decoration: none;
+        color: hsl(245, 63%, 57%);
+    }
+
+    .box::after{
+        content: url('./images/icon-music.svg');
+        position: absolute;
+        transform: scale(.8);
+        top: 15px;
+        left: 14px;
+    }
+
+    .button{
+        width: 77%;
+        height: 41px;
+        background-color: var(--Bright-blue);
+        justify-content: center;
+        align-self: center;
+        margin-top: 25px;
+        color: white;
+        font-family: "Red Hat Display", sans-serif;
+        text-align: center;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 40px;
+        border: .5px solid black;
+        box-shadow: 0px 7px 12px 5px hsl(245deg 75% 52% / 21%);
+    }
+    .button:hover{
+        background-color: hsl(245, 64%, 59%);
+        cursor: pointer;
+        border: none;
+    }
+
+    .container .cancel{
+        font-weight: 700;
+        font-size: 12px;
+        margin-top: 23px;
+    }
+
+    .container .cancel:hover{
+        cursor: pointer;
+        color: black;
+    }
+
+    @media(max-width:375px){
+        .container{
+            width: 317px;
+            height: 543px;
+        }
+
+        .container h1{
+            font-size: 22px;
+            margin-top: 35px;
+        }
+
+        .container p{
+            margin-left: 26px;
+            margin-right: 26px;
+        }
+
+        .box .plan{
+            font-size: 13px;
+            margin-left: 26%;
+            margin-top: 21px;
+        }
+
+        .box p {
+            margin-left: -13%;
+            transform: translateY(-19px);
+        }
+
+        .box::after{
+            transform: scale(.9);
+        }
+    
+        .button{
+            width: 84%;
+            height: 45px;
+            line-height: 44px;
+    }
+
+    .container .cancel{
+        font-size: 14px;
+        margin-top: 22px;
+    }
+}
